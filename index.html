@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skup mieszkań Wrocław do 60 m² — gotówka w 24h | Skup Nieruchomości Wrocław</title>
+  <meta name="description" content="Skupujemy mieszkania we Wrocławiu do 60 m² za gotówkę w 24h. Zadłużenia, komornik, spadki, remont — każdy stan. Bez prowizji, bez kosztów, odpowiedź w 3-4h." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://[PLACEHOLDER: DOMENA]/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://[PLACEHOLDER: DOMENA]/" />
+  <meta property="og:title" content="Skup mieszkań Wrocław do 60 m² — gotówka w 24h" />
+  <meta property="og:description" content="Skupujemy mieszkania we Wrocławiu do 60 m² za gotówkę w 24h. Bez prowizji, bez kosztów." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-dark:     #1f1f1f;
+      --bg-card:     #2b2b2b;
+      --bg-darker:   #161616;
+      --gold:        #d4a83b;
+      --gold-light:  #e0b04a;
+      --gold-dim:    #a07a22;
+      --white:       #ffffff;
+      --cream:       #f5f0e8;
+      --text-muted:  #aaaaaa;
+      --border:      #3a3a3a;
+      --radius:      10px;
+      --radius-lg:   18px;
+      --shadow:      0 4px 32px rgba(0,0,0,.45);
+      --transition:  .25s ease;
+      --font-head:   'Montserrat', sans-serif;
+      --font-body:   'Open Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ============================================================
+       UTILITY
+    ============================================================ */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .gold { color: var(--gold); }
+
+    .btn {
+      display: inline-block;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: .95rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      padding: 16px 34px;
+      border-radius: 6px;
+      cursor: pointer;
+      border: none;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(212,168,59,.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold);
+      border: 2px solid var(--gold);
+    }
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--bg-darker);
+    }
+
+    .section-label {
+      font-family: var(--font-head);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 640px;
+    }
+
+    /* ============================================================
+       SVG LOGO (inline — no external request)
+    ============================================================ */
+    .logo-svg { height: 46px; width: auto; }
+
+    /* ============================================================
+       STICKY TOP BAR
+    ============================================================ */
+    #topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--bg-darker);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 16px rgba(0,0,0,.5);
+    }
+
+    #topbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .topbar-phone {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    .topbar-phone svg { flex-shrink: 0; }
+
+    @media (max-width: 480px) {
+      .topbar-phone span.label { display: none; }
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      background: var(--bg-darker);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0 90px;
+    }
+
+    /* subtle geometric background pattern */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 70% 40%, rgba(212,168,59,.07) 0%, transparent 55%),
+        radial-gradient(circle at 15% 80%, rgba(212,168,59,.05) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    /* decorative circles */
+    .hero-decor {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(212,168,59,.12);
+      pointer-events: none;
+    }
+    .hero-decor-1 { width: 500px; height: 500px; top: -180px; right: -160px; }
+    .hero-decor-2 { width: 280px; height: 280px; bottom: -100px; left: -80px; border-color: rgba(212,168,59,.08); }
+    .hero-decor-3 { width: 180px; height: 180px; top: 30px; right: 80px; border-color: rgba(212,168,59,.15); }
+
+    #hero .container {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media (max-width: 860px) {
+      #hero .container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    .hero-content {}
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212,168,59,.12);
+      border: 1px solid rgba(212,168,59,.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero-title {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .hero-title span { color: var(--gold); }
+
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+      max-width: 500px;
+    }
+
+    .hero-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero-bullet {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .92rem;
+      color: var(--cream);
+    }
+
+    .hero-bullet-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       FORM CARD (shared hero + bottom CTA)
+    ============================================================ */
+    .form-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-card-title {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .form-card-sub {
+      font-size: .88rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      background: #1a1a1a;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: .95rem;
+      padding: 12px 14px;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .form-group input::placeholder { color: #555; }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212,168,59,.15);
+    }
+
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23d4a83b' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+
+    .form-group select option { background: #2b2b2b; }
+
+    .range-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .range-wrapper input[type=range] {
+      flex: 1;
+      padding: 0;
+      height: 4px;
+      background: var(--border);
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      accent-color: var(--gold);
+    }
+
+    .range-wrapper input[type=range]:focus {
+      box-shadow: none;
+      border-color: transparent;
+    }
+
+    .range-val {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: .95rem;
+      color: var(--gold);
+      min-width: 54px;
+      text-align: right;
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 8px;
+      font-size: 1rem;
+      padding: 17px 24px;
+    }
+
+    .form-consent {
+      font-size: .75rem;
+      color: #666;
+      margin-top: 12px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px 20px;
+    }
+
+    .form-success svg { margin: 0 auto 16px; }
+
+    .form-success-title {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .form-success p { color: var(--text-muted); font-size: .95rem; }
+
+    /* ============================================================
+       FOR WHOM SECTION
+    ============================================================ */
+    #for-whom {
+      background: var(--bg-dark);
+      padding: 90px 0;
+    }
+
+    #for-whom .intro { margin-bottom: 52px; }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .whom-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .whom-card:hover {
+      border-color: var(--gold-dim);
+      transform: translateY(-3px);
+    }
+
+    .whom-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(212,168,59,.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whom-card h3 {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+      line-height: 1.3;
+    }
+
+    .whom-card p {
+      font-size: .88rem;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       HOW IT WORKS
+    ============================================================ */
+    #how {
+      background: var(--bg-darker);
+      padding: 90px 0;
+    }
+
+    #how .intro { margin-bottom: 60px; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+
+    @media (max-width: 780px) {
+      .steps { grid-template-columns: 1fr 1fr; gap: 32px 16px; }
+      .steps::after { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .steps { grid-template-columns: 1fr; }
+    }
+
+    /* connector line */
+    .steps::after {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: calc(12.5% + 24px);
+      right: calc(12.5% + 24px);
+      height: 1px;
+      background: repeating-linear-gradient(90deg, var(--gold-dim) 0, var(--gold-dim) 8px, transparent 8px, transparent 18px);
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-num {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(212,168,59,.1);
+      border: 2px solid var(--gold-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 22px;
+      flex-shrink: 0;
+    }
+
+    .step h3 {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      font-size: .88rem;
+      color: var(--text-muted);
+    }
+
+    .step-time {
+      display: inline-block;
+      margin-top: 10px;
+      font-family: var(--font-head);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: var(--gold);
+      background: rgba(212,168,59,.1);
+      border-radius: 100px;
+      padding: 3px 10px;
+    }
+
+    /* ============================================================
+       WHY US / TRUST
+    ============================================================ */
+    #why {
+      background: var(--bg-dark);
+      padding: 90px 0;
+    }
+
+    #why .intro { margin-bottom: 52px; }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .trust-grid { grid-template-columns: 1fr; }
+    }
+
+    .trust-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      background: rgba(212,168,59,.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trust-item h4 {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: .95rem;
+      color: var(--white);
+      margin-bottom: 5px;
+    }
+
+    .trust-item p {
+      font-size: .85rem;
+      color: var(--text-muted);
+    }
+
+    /* opinions */
+    .opinions-label {
+      font-family: var(--font-head);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .opinions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .opinions-grid { grid-template-columns: 1fr; }
+    }
+
+    .opinion-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      position: relative;
+    }
+
+    .opinion-card::before {
+      content: '"';
+      position: absolute;
+      top: 16px;
+      right: 22px;
+      font-family: Georgia, serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: var(--gold-dim);
+      opacity: .4;
+    }
+
+    .opinion-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 12px;
+    }
+
+    .opinion-stars span { color: var(--gold); font-size: 1rem; }
+
+    .opinion-text {
+      font-size: .9rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      font-style: italic;
+    }
+
+    .opinion-author {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: .85rem;
+      color: var(--white);
+    }
+
+    .opinion-placeholder {
+      font-size: .75rem;
+      color: #444;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    #faq {
+      background: var(--bg-darker);
+      padding: 90px 0;
+    }
+
+    #faq .intro { margin-bottom: 48px; }
+
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-q {
+      width: 100%;
+      background: var(--bg-card);
+      border: none;
+      color: var(--white);
+      text-align: left;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 22px 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      transition: background var(--transition);
+    }
+
+    .faq-q:hover { background: #2f2f2f; }
+
+    .faq-q.open { color: var(--gold); background: #2f2f2f; }
+
+    .faq-chevron {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      transition: transform var(--transition);
+    }
+
+    .faq-q.open .faq-chevron { transform: rotate(180deg); }
+
+    .faq-a {
+      background: #222;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .35s ease;
+      padding: 0 24px;
+      font-size: .95rem;
+      color: var(--text-muted);
+    }
+
+    .faq-a.open {
+      max-height: 200px;
+      padding: 18px 24px 22px;
+    }
+
+    /* ============================================================
+       BOTTOM CTA
+    ============================================================ */
+    #bottom-cta {
+      background: var(--bg-dark);
+      padding: 90px 0;
+    }
+
+    #bottom-cta .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media (max-width: 860px) {
+      #bottom-cta .container { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    .cta-info {}
+
+    .cta-info .section-title { margin-bottom: 24px; }
+
+    .cta-phone-block {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 36px;
+    }
+
+    .cta-phone-label {
+      font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .cta-phone-num {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 2rem;
+      color: var(--gold);
+      letter-spacing: .02em;
+    }
+
+    .cta-phone-note {
+      font-size: .85rem;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer {
+      background: var(--bg-darker);
+      border-top: 1px solid var(--border);
+      padding: 44px 0 32px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      text-align: right;
+    }
+
+    @media (max-width: 600px) {
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-contact { text-align: left; }
+    }
+
+    .footer-contact a {
+      font-size: .92rem;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+
+    .footer-contact a:hover { color: var(--gold); }
+
+    .footer-copy {
+      font-size: .78rem;
+      color: #444;
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    /* ============================================================
+       FLOATING MOBILE CALL BUTTON
+    ============================================================ */
+    .fab-call {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      z-index: 999;
+      background: var(--gold);
+      color: var(--bg-darker);
+      border-radius: 100px;
+      padding: 14px 22px;
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: .88rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 28px rgba(212,168,59,.45);
+      animation: fab-pulse 2.8s infinite;
+    }
+
+    @keyframes fab-pulse {
+      0%, 100% { box-shadow: 0 6px 28px rgba(212,168,59,.45); }
+      50%       { box-shadow: 0 6px 36px rgba(212,168,59,.65); }
+    }
+
+    @media (max-width: 700px) {
+      .fab-call { display: flex; }
+    }
+
+    /* ============================================================
+       DIVIDER LINE
+    ============================================================ */
+    .gold-line {
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      border: none;
+      opacity: .45;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================================================================
+     FLOATING MOBILE CALL BUTTON
+================================================================ -->
+<a class="fab-call" href="tel:[PLACEHOLDER: NUMER_TELEFONU]" aria-label="Zadzwoń do nas">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+  </svg>
+  Zadzwoń
+</a>
+
+<!-- ================================================================
+     1. STICKY TOP BAR
+================================================================ -->
+<header id="topbar" role="banner">
+  <div class="container">
+    <!-- LOGO SVG inline -->
+    <a href="#" aria-label="Strona główna — Skup Nieruchomości Wrocław">
+      <svg class="logo-svg" viewBox="0 0 260 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skup Nieruchomości Wrocław logo">
+        <!-- House icon -->
+        <g>
+          <!-- roof -->
+          <path d="M10 28L28 10L46 28" stroke="#d4a83b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- walls -->
+          <rect x="14" y="28" width="28" height="18" rx="1" stroke="#d4a83b" stroke-width="2.5"/>
+          <!-- door -->
+          <rect x="22" y="36" width="8" height="10" rx="1" stroke="#d4a83b" stroke-width="2"/>
+          <!-- two dot accents -->
+          <circle cx="20" cy="34" r="2" fill="#d4a83b"/>
+          <circle cx="36" cy="34" r="2" fill="#d4a83b"/>
+        </g>
+        <!-- "SKUP" text -->
+        <text x="56" y="30" font-family="Montserrat, sans-serif" font-weight="800" font-size="17" fill="#ffffff" letter-spacing="2">SKUP</text>
+        <!-- "NIERUCHOMOŚCI" text -->
+        <text x="56" y="44" font-family="Montserrat, sans-serif" font-weight="400" font-size="9" fill="#aaaaaa" letter-spacing="2.5">NIERUCHOMOŚCI</text>
+        <!-- "WROCŁAW" text in serif-style bold gold -->
+        <text x="56" y="56" font-family="Georgia, serif" font-weight="700" font-size="11" fill="#d4a83b" letter-spacing="3">WROCŁAW</text>
+      </svg>
+    </a>
+
+    <a class="topbar-phone" href="tel:[PLACEHOLDER: NUMER_TELEFONU]" aria-label="Zadzwoń do nas">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      <span class="label">Zadzwoń:</span>
+      <span>[PLACEHOLDER: NUMER_TELEFONU]</span>
+    </a>
+  </div>
+</header>
+
+<!-- ================================================================
+     2. HERO
+================================================================ -->
+<section id="hero" aria-label="Skup mieszkań Wrocław — oferta">
+  <span class="hero-decor hero-decor-1"></span>
+  <span class="hero-decor hero-decor-2"></span>
+  <span class="hero-decor hero-decor-3"></span>
+
+  <div class="container">
+    <!-- LEFT: copy -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Wrocław · Gotówka w 24h · 0 zł prowizji
+      </div>
+      <h1 class="hero-title">
+        Skup mieszkań<br/>
+        <span>we Wrocławiu do 60 m²</span><br/>
+        — gotówka w 24h
+      </h1>
+      <p class="hero-sub">
+        Oddzwonimy w ciągu 3–4h. Realna oferta na spotkaniu. Bez pośredników, bez prowizji, bez formalności po Twojej stronie.
+      </p>
+      <div class="hero-bullets">
+        <div class="hero-bullet"><span class="hero-bullet-dot"></span>Kupujemy mieszkania z komornikiem, zadłużeniem, w spadku</div>
+        <div class="hero-bullet"><span class="hero-bullet-dot"></span>Każdy stan techniczny — bez remontu</div>
+        <div class="hero-bullet"><span class="hero-bullet-dot"></span>Wszystkie formalności po naszej stronie</div>
+        <div class="hero-bullet"><span class="hero-bullet-dot"></span>Akt notarialny, bezpieczna transakcja</div>
+      </div>
+    </div>
+
+    <!-- RIGHT: form -->
+    <div class="form-card" id="hero-form-card">
+      <p class="form-card-title">Sprawdź, czy kupimy Twoje mieszkanie</p>
+      <p class="form-card-sub">Wypełnij poniżej — odpiszemy w ciągu 3–4h</p>
+
+      <form id="hero-form" novalidate>
+        <div class="form-group">
+          <label for="h-name">Imię i nazwisko</label>
+          <input type="text" id="h-name" name="name" placeholder="Jan Kowalski" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="h-phone">Telefon</label>
+          <input type="tel" id="h-phone" name="phone" placeholder="+48 600 000 000" required autocomplete="tel" />
+        </div>
+        <div class="form-group">
+          <label for="h-location">Adres / dzielnica (Wrocław)</label>
+          <select id="h-location" name="location" required>
+            <option value="" disabled selected>Wybierz dzielnicę</option>
+            <option>Stare Miasto</option>
+            <option>Śródmieście</option>
+            <option>Krzyki</option>
+            <option>Fabryczna</option>
+            <option>Psie Pole</option>
+            <option>Wrocław — inna dzielnica</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="h-sqm">Metraż mieszkania</label>
+          <div class="range-wrapper">
+            <input type="range" id="h-sqm" name="sqm" min="15" max="60" value="40" step="1" />
+            <span class="range-val" id="h-sqm-val">40 m²</span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-gold form-submit">
+          Sprawdź, czy kupimy Twoje mieszkanie
+        </button>
+        <p class="form-consent">Wysyłając formularz, wyrażasz zgodę na kontakt telefoniczny w sprawie oferty. Dane nie są przekazywane osobom trzecim.</p>
+      </form>
+
+      <div class="form-success" id="hero-success">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+          <circle cx="26" cy="26" r="25" stroke="#d4a83b" stroke-width="2"/>
+          <path d="M15 26l8 8 14-14" stroke="#d4a83b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="form-success-title">Dziękujemy!</p>
+        <p>Oddzwonimy w ciągu <strong>3–4h</strong>.<br/>Przygotujemy dla Ciebie realną ofertę.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-line" />
+
+<!-- ================================================================
+     3. FOR WHOM
+================================================================ -->
+<section id="for-whom" aria-label="Dla kogo jest oferta skupu">
+  <div class="container">
+    <div class="intro">
+      <p class="section-label">Kwalifikacja</p>
+      <h2 class="section-title">Dla kogo jest ta oferta?</h2>
+      <p class="section-sub">Skupujemy mieszkania w każdej trudnej sytuacji. Oto przypadki, z którymi pomagamy najczęściej.</p>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="whom-card">
+        <div class="whom-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+        </div>
+        <h3>Komornik lub zadłużenie</h3>
+        <p>Zajęcie komornicze, hipoteka, długi na nieruchomości — analizujemy każdą sytuację i działamy szybko.</p>
+      </div>
+
+      <div class="whom-card">
+        <div class="whom-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h3>Sprawa spadkowa lub współwłasność</h3>
+        <p>Skomplikowane stosunki własnościowe, wielu spadkobierców, brak zgody — znamy te problemy od podszewki.</p>
+      </div>
+
+      <div class="whom-card">
+        <div class="whom-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3>Mieszkanie do remontu</h3>
+        <p>Nie chcesz inwestować w remont przed sprzedażą? Kupujemy w stanie „as-is", bez żadnych wymagań.</p>
+      </div>
+
+      <div class="whom-card">
+        <div class="whom-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3>Potrzebujesz szybkiej gotówki</h3>
+        <p>Nie chcesz czekać miesięcy na kupca z rynku. U nas decyzja w ciągu doby, pieniądze przy akcie.</p>
+      </div>
+
+      <div class="whom-card">
+        <div class="whom-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3>Mieszkanie do 60 m² we Wrocławiu</h3>
+        <p>Kupujemy wyłącznie na terenie Wrocławia. Metraż do 60 m² — każda dzielnica, każdy stan prawny.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="gold-line" />
+
+<!-- ================================================================
+     4. HOW IT WORKS — 4 STEPS
+================================================================ -->
+<section id="how" aria-label="Jak działa skup mieszkań — 4 kroki">
+  <div class="container">
+    <div class="intro" style="text-align:center;">
+      <p class="section-label">Proces</p>
+      <h2 class="section-title" style="margin:0 auto 18px;">Jak to działa?</h2>
+      <p class="section-sub" style="margin:0 auto;">Cztery proste kroki od pierwszego kontaktu do gotówki na koncie.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Kontakt</h3>
+        <p>Wypełniasz formularz lub dzwonisz. Oddzwaniamy w ciągu 3–4h.</p>
+        <span class="step-time">3–4h</span>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Spotkanie i wycena</h3>
+        <p>Przyjeżdżamy, oglądamy nieruchomość i analizujemy dokumenty.</p>
+        <span class="step-time">Na miejscu</span>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Decyzja na miejscu</h3>
+        <p>Przedstawiamy konkretną ofertę zakupu — bez czekania, bez negocjacji przez tygodnie.</p>
+        <span class="step-time">Tego samego dnia</span>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Zakup gotówkowy</h3>
+        <p>Finalizacja u notariusza. Pieniądze trafiają na Twoje konto.</p>
+        <span class="step-time">W 24h</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="gold-line" />
+
+<!-- ================================================================
+     5. WHY US / TRUST
+================================================================ -->
+<section id="why" aria-label="Dlaczego warto wybrać nasz skup nieruchomości">
+  <div class="container">
+    <div class="intro">
+      <p class="section-label">Zaufanie</p>
+      <h2 class="section-title">Dlaczego my?</h2>
+      <p class="section-sub">Lokalna firma, realne doświadczenie, zero ukrytych kosztów.</p>
+    </div>
+
+    <div class="trust-grid">
+
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Lokalna firma z Wrocławia</h4>
+          <p>Działamy wyłącznie na wrocławskim rynku. Znamy specyfikę lokalnych nieruchomości i uwarunkowań prawnych.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Wszystkie formalności po naszej stronie</h4>
+          <p>Obsługujemy dokumentację, kontakt z notariuszem i wszelkie formalności związane z transakcją.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Bezpieczna transakcja notarialna</h4>
+          <p>Każda sprzedaż odbywa się w formie aktu notarialnego. Pełna dyskrecja i bezpieczeństwo prawne.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <div>
+          <h4>0 zł kosztów i prowizji</h4>
+          <p>Nie pobieramy żadnych prowizji ani opłat pośrednika. Kwota, którą ustalamy, to kwota, którą otrzymujesz.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Opinions / testimonials -->
+    <p class="opinions-label">Opinie klientów</p>
+    <div class="opinions-grid">
+
+      <div class="opinion-card">
+        <div class="opinion-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="opinion-text">[Miejsce na opinię klienta — do uzupełnienia realną treścią]</p>
+        <p class="opinion-author">[Imię Klienta]</p>
+        <p class="opinion-placeholder">Placeholder — uzupełnij prawdziwą opinią</p>
+      </div>
+
+      <div class="opinion-card">
+        <div class="opinion-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="opinion-text">[Miejsce na opinię klienta — do uzupełnienia realną treścią]</p>
+        <p class="opinion-author">[Imię Klienta]</p>
+        <p class="opinion-placeholder">Placeholder — uzupełnij prawdziwą opinią</p>
+      </div>
+
+      <div class="opinion-card">
+        <div class="opinion-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="opinion-text">[Miejsce na opinię klienta — do uzupełnienia realną treścią]</p>
+        <p class="opinion-author">[Imię Klienta]</p>
+        <p class="opinion-placeholder">Placeholder — uzupełnij prawdziwą opinią</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="gold-line" />
+
+<!-- ================================================================
+     6. FAQ
+================================================================ -->
+<section id="faq" aria-label="Najczęstsze pytania — skup mieszkań Wrocław">
+  <div class="container">
+    <div class="intro" style="text-align:center;">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title" style="margin: 0 auto 18px;">Najczęstsze pytania</h2>
+      <p class="section-sub" style="margin: 0 auto;">Odpowiadamy na pytania, które zadają nam najczęściej sprzedający.</p>
+    </div>
+
+    <nav class="faq-list" aria-label="Pytania i odpowiedzi">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Czy mogę sprzedać mieszkanie z komornikiem lub długiem?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="faq-a" role="region">
+          Tak. Analizujemy każdą sytuację indywidualnie. Zajęcia komornicze, hipoteki, zaległości czynszowe — pomagamy rozwiązać takie sprawy, żebyś mógł sprzedać nieruchomość bez dodatkowych problemów.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Czy muszę przygotowywać mieszkanie do sprzedaży?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="faq-a" role="region">
+          Nie. Kupujemy mieszkania w stanie „as-is" — bez remontu, sprzątania ani jakichkolwiek nakładów z Twojej strony. Stan techniczny i wyposażenie nie mają wpływu na to, czy kupimy.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Jak szybko dostanę pieniądze?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="faq-a" role="region">
+          Decyzję zakupową podejmujemy w ciągu 24–48h od spotkania. Przelew następuje przy podpisaniu aktu notarialnego — zwykle kilka dni od Twojej akceptacji oferty.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Czy poniosę jakieś koszty?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="faq-a" role="region">
+          Nie. Nie pobieramy żadnych prowizji ani opłat pośrednika. Koszty notarialne i wszelkie formalności leżą po naszej stronie.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Jakie mieszkania kupujecie?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="#d4a83b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="faq-a" role="region">
+          Skupujemy mieszkania do 60 m² na terenie Wrocławia. Nie mamy wymagań co do stanu technicznego ani prawnego — każda sytuacja jest przez nas analizowana indywidualnie.
+        </div>
+      </div>
+
+    </nav>
+  </div>
+</section>
+
+<hr class="gold-line" />
+
+<!-- ================================================================
+     7. BOTTOM CTA
+================================================================ -->
+<section id="bottom-cta" aria-label="Formularz kontaktowy — wycena mieszkania">
+  <div class="container">
+    <div class="cta-info">
+      <p class="section-label">Bezpłatna wycena</p>
+      <h2 class="section-title">
+        Sprawdź, ile możemy<br/>
+        <span class="gold">zapłacić za Twoje mieszkanie</span>
+      </h2>
+      <p style="color:var(--text-muted); font-size:1rem; max-width:420px;">
+        Wypełnij formularz — zadzwonimy w ciągu 3–4h z realną propozycją. Zero zobowiązań.
+      </p>
+
+      <div class="cta-phone-block">
+        <span class="cta-phone-label">Możesz też zadzwonić bezpośrednio</span>
+        <a href="tel:[PLACEHOLDER: NUMER_TELEFONU]" class="cta-phone-num">[PLACEHOLDER: NUMER_TELEFONU]</a>
+        <span class="cta-phone-note">Pon–Pt 8:00–20:00 · Sob 9:00–17:00</span>
+      </div>
+    </div>
+
+    <!-- BOTTOM FORM -->
+    <div class="form-card" id="bottom-form-card">
+      <p class="form-card-title">Formularz wyceny</p>
+      <p class="form-card-sub">Bezpłatnie i bez zobowiązań</p>
+
+      <form id="bottom-form" novalidate>
+        <div class="form-group">
+          <label for="b-name">Imię i nazwisko</label>
+          <input type="text" id="b-name" name="name" placeholder="Jan Kowalski" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="b-phone">Telefon</label>
+          <input type="tel" id="b-phone" name="phone" placeholder="+48 600 000 000" required autocomplete="tel" />
+        </div>
+        <div class="form-group">
+          <label for="b-location">Adres / dzielnica (Wrocław)</label>
+          <select id="b-location" name="location" required>
+            <option value="" disabled selected>Wybierz dzielnicę</option>
+            <option>Stare Miasto</option>
+            <option>Śródmieście</option>
+            <option>Krzyki</option>
+            <option>Fabryczna</option>
+            <option>Psie Pole</option>
+            <option>Wrocław — inna dzielnica</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="b-sqm">Metraż mieszkania</label>
+          <div class="range-wrapper">
+            <input type="range" id="b-sqm" name="sqm" min="15" max="60" value="40" step="1" />
+            <span class="range-val" id="b-sqm-val">40 m²</span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-gold form-submit">
+          Sprawdź, czy kupimy Twoje mieszkanie
+        </button>
+        <p class="form-consent">Wysyłając formularz, wyrażasz zgodę na kontakt telefoniczny w sprawie oferty. Dane nie są przekazywane osobom trzecim.</p>
+      </form>
+
+      <div class="form-success" id="bottom-success">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+          <circle cx="26" cy="26" r="25" stroke="#d4a83b" stroke-width="2"/>
+          <path d="M15 26l8 8 14-14" stroke="#d4a83b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="form-success-title">Dziękujemy!</p>
+        <p>Oddzwonimy w ciągu <strong>3–4h</strong>.<br/>Przygotujemy dla Ciebie realną ofertę.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     8. FOOTER
+================================================================ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <a href="#" aria-label="Skup Nieruchomości Wrocław — strona główna">
+          <svg viewBox="0 0 260 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:42px;width:auto;">
+            <g>
+              <path d="M10 28L28 10L46 28" stroke="#d4a83b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="14" y="28" width="28" height="18" rx="1" stroke="#d4a83b" stroke-width="2.5"/>
+              <rect x="22" y="36" width="8" height="10" rx="1" stroke="#d4a83b" stroke-width="2"/>
+              <circle cx="20" cy="34" r="2" fill="#d4a83b"/>
+              <circle cx="36" cy="34" r="2" fill="#d4a83b"/>
+            </g>
+            <text x="56" y="30" font-family="Montserrat, sans-serif" font-weight="800" font-size="17" fill="#ffffff" letter-spacing="2">SKUP</text>
+            <text x="56" y="44" font-family="Montserrat, sans-serif" font-weight="400" font-size="9" fill="#aaaaaa" letter-spacing="2.5">NIERUCHOMOŚCI</text>
+            <text x="56" y="56" font-family="Georgia, serif" font-weight="700" font-size="11" fill="#d4a83b" letter-spacing="3">WROCŁAW</text>
+          </svg>
+        </a>
+        <p style="font-size:.82rem; color:var(--text-muted); margin-top:8px; max-width:280px;">
+          Bezpośredni skup mieszkań do 60 m²<br/>we Wrocławiu za gotówkę.
+        </p>
+      </div>
+
+      <div class="footer-contact">
+        <a href="tel:[PLACEHOLDER: NUMER_TELEFONU]" style="font-family:var(--font-head); font-weight:700; font-size:1.05rem; color:var(--gold);">
+          [PLACEHOLDER: NUMER_TELEFONU]
+        </a>
+        <a href="mailto:[PLACEHOLDER: EMAIL]">[PLACEHOLDER: EMAIL]</a>
+        <span style="font-size:.8rem; color:#555; margin-top:4px;">Wrocław · Pon–Pt 8:00–20:00</span>
+      </div>
+    </div>
+
+    <p class="footer-copy">
+      © <span id="footer-year"></span> Skup Nieruchomości Wrocław — bezpośredni skup mieszkań do 60 m². Wszelkie prawa zastrzeżone.
+    </p>
+  </div>
+</footer>
+
+<!-- ================================================================
+     JAVASCRIPT
+================================================================ -->
+<script>
+  // ----------------------------------------------------------------
+  // Footer year
+  // ----------------------------------------------------------------
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  // ----------------------------------------------------------------
+  // Range slider live value
+  // ----------------------------------------------------------------
+  function bindRange(sliderId, valId) {
+    const s = document.getElementById(sliderId);
+    const v = document.getElementById(valId);
+    if (!s || !v) return;
+    const update = () => { v.textContent = s.value + ' m²'; };
+    s.addEventListener('input', update);
+    update();
+  }
+  bindRange('h-sqm', 'h-sqm-val');
+  bindRange('b-sqm', 'b-sqm-val');
+
+  // ----------------------------------------------------------------
+  // FAQ accordion
+  // ----------------------------------------------------------------
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+
+      // close all
+      document.querySelectorAll('.faq-q.open').forEach(b => {
+        b.classList.remove('open');
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+
+      // toggle clicked
+      if (!isOpen) {
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.classList.add('open');
+      }
+    });
+  });
+
+  // ----------------------------------------------------------------
+  // Form submission — POST to Zapier webhook
+  // ----------------------------------------------------------------
+  const WEBHOOK_URL = '[PLACEHOLDER: ZAPIER_WEBHOOK_URL]';
+
+  async function handleForm(formEl, successEl) {
+    const name     = formEl.querySelector('[name=name]').value.trim();
+    const phone    = formEl.querySelector('[name=phone]').value.trim();
+    const location = formEl.querySelector('[name=location]').value;
+    const sqm      = formEl.querySelector('[name=sqm]').value;
+
+    // Basic validation
+    if (!name || !phone || !location) {
+      highlightEmpty(formEl);
+      return;
+    }
+
+    const submitBtn = formEl.querySelector('[type=submit]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Wysyłanie…';
+
+    const payload = {
+      name,
+      phone,
+      location,
+      sqm: sqm + ' m²',
+      source: window.location.href,
+      timestamp: new Date().toISOString()
+    };
+
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        mode: 'no-cors',    // Zapier webhooks require no-cors
+        body: JSON.stringify(payload)
+      });
+    } catch (e) {
+      // no-cors: fetch always succeeds or fails silently
+    }
+
+    // Show success regardless (no-cors = opaque response)
+    formEl.style.display = 'none';
+    successEl.style.display = 'block';
+  }
+
+  function highlightEmpty(formEl) {
+    formEl.querySelectorAll('input[required], select[required]').forEach(el => {
+      if (!el.value.trim()) {
+        el.style.borderColor = '#c0392b';
+        el.addEventListener('input', () => { el.style.borderColor = ''; }, { once: true });
+      }
+    });
+  }
+
+  document.getElementById('hero-form').addEventListener('submit', e => {
+    e.preventDefault();
+    handleForm(document.getElementById('hero-form'), document.getElementById('hero-success'));
+  });
+
+  document.getElementById('bottom-form').addEventListener('submit', e => {
+    e.preventDefault();
+    handleForm(document.getElementById('bottom-form'), document.getElementById('bottom-success'));
+  });
+
+  // ----------------------------------------------------------------
+  // Sticky topbar shrink on scroll (optional feel improvement)
+  // ----------------------------------------------------------------
+  const topbar = document.getElementById('topbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      topbar.style.borderBottomColor = 'rgba(212,168,59,.2)';
+    } else {
+      topbar.style.borderBottomColor = 'var(--border)';
+    }
+  }, { passive: true });
+</script>
+
+</body>
+</html>
