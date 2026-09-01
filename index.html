@@ -1414,21 +1414,19 @@
     submitBtn.disabled = true;
     submitBtn.textContent = 'Wysyłanie…';
 
-    const payload = {
-      name,
-      phone,
-      location,
-      sqm: sqm + ' m²',
-      source: window.location.href,
-      timestamp: new Date().toISOString()
-    };
+    const params = new URLSearchParams();
+    params.append('name', name);
+    params.append('phone', phone);
+    params.append('location', location);
+    params.append('sqm', sqm + ' m²');
+    params.append('source', window.location.href);
+    params.append('timestamp', new Date().toISOString());
 
     try {
       await fetch(WEBHOOK_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
         mode: 'no-cors',
-        body: JSON.stringify(payload)
+        body: params
       });
     } catch (e) {}
 
